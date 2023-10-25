@@ -1,3 +1,4 @@
+import styles from "../public/css/home.module.css";
 import { GetStaticProps } from "next";
 import Carousel from "../src/components/Carousel";
 import CarouselCar from "../src/components/CarouselCar";
@@ -16,13 +17,13 @@ type Props = {
 
 export default function HomePage({ cars }: Props) {
   return (
-    <div>
-      <Carousel>
+    <main className={styles.main}>
+      <Carousel items={cars.length}>
         {cars.map((car) => (
           <CarouselCar key={car.id} car={car} />
         ))}
       </Carousel>
-    </div>
+    </main>
   );
 }
 

@@ -1,0 +1,104 @@
+.container {
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  overflow: hidden;
+  height: 60vh;
+  padding-inline: 1rem;
+}
+
+.itemWrapper {
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.itemWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.indicator {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 1rem;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dot {
+  border-radius: 50%;
+  border: none;
+  width: 15px;
+  height: 10pxrem;
+  background-color: hsl(0, 0%, 70%);
+}
+.dot:focus {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.buttonContainer {
+  position: absolute;
+  display: none;
+  color: azure;
+  gap: 0.2rem;
+  bottom: 2rem;
+  right: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonContainer > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonContainer > * {
+  padding: 0;
+  margin: 0;
+}
+
+.buttonContainer > button:hover {
+  scale: 1.1;
+}
+
+.buttonPrev img {
+  rotate: 180deg;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .itemWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    gap: 1rem;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+  }
+  .indicator {
+    display: none;
+  }
+
+  .buttonContainer {
+    display: flex;
+  }
+}

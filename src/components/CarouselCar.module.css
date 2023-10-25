@@ -1,0 +1,89 @@
+.container {
+  width: 100%;
+  scroll-snap-align: start;
+  /* position: relative; */
+
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-inline: 0.5rem;
+}
+
+.text {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: hsl(0, 0%, 47%);
+}
+
+.bodyType {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.model {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 1.3;
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.links > a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: hsl(214, 57%, 40%);
+  text-decoration: none;
+}
+
+.links > a:hover {
+  color: hsl(214, 57%, 25%);
+  stroke: hsl(214, 57%, 25%);
+}
+
+.links > a > span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.links > a > span > svg {
+  width: 1rem;
+  height: 1rem;
+  fill: hsl(214, 57%, 40%);
+  stroke: hsl(214, 57%, 40%);
+}
+
+.extendedModel {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100vw;
+  }
+
+  .extendedModel {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .text {
+    width: 25rem;
+  }
+}
