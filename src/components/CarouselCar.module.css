@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  scroll-snap-align: flex-start;
+  scroll-snap-align: start;
   /* position: relative; */
 
   display: flex;
