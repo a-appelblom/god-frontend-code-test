@@ -72,7 +72,7 @@ export default function Carousel({ children, items }: Props) {
               backgroundColor:
                 (i === active && "hsl(0, 0%, 10%)") || "hsl(0, 0%, 70%)",
             }}
-          ></button>
+          />
         ))}
       </div>
       <div className={styles.buttonContainer}>

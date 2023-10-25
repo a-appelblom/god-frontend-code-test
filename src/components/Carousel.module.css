@@ -1,9 +1,9 @@
 .container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   overflow: hidden;
-  height: 60vh;
+  min-height: 55vh;
   padding-inline: 1rem;
 }
 
@@ -27,11 +27,9 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  height: 1rem;
   width: 100%;
-  right: 0;
-  bottom: 1rem;
-  left: 0;
+  margin: 0 auto;
+  bottom: 0px;
 }
 
 .dot {
@@ -40,7 +38,10 @@
   width: 15px;
   height: 15px;
   background-color: hsl(0, 0%, 70%);
+  transition: all 0.1s ease-in-out;
+  padding: 0;
 }
+
 .dot:focus {
   background-color: hsl(0, 0%, 50%);
 }
@@ -48,7 +49,6 @@
 .buttonContainer {
   position: absolute;
   display: none;
-  color: azure;
   gap: 0.2rem;
   bottom: 2rem;
   right: 2rem;

@@ -63,13 +63,6 @@ h6 {
   isolation: isolate;
 }
 
-:root {
-  --bp-s: 320px;
-  --bp-m: 768px;
-  --bp-l: 1024px;
-  --bp-xl: 1280px;
-}
-
 body {
   font-family: "calibri", sans-serif;
 }
