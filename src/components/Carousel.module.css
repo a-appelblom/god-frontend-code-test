@@ -38,7 +38,7 @@
   border-radius: 50%;
   border: none;
   width: 15px;
-  height: 10pxrem;
+  height: 15px;
   background-color: hsl(0, 0%, 70%);
 }
 .dot:focus {
