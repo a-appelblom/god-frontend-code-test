@@ -53,6 +53,9 @@ export default function Carousel({ children, items }: Props) {
       });
     }
   }
+  useEffect(() => {
+    wrapperRef.current?.scrollTo({ left: 0, behavior: "instant" });
+  }, [children]);
 
   return (
     <div className={styles.container}>

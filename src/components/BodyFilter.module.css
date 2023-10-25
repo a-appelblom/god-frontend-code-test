@@ -1,0 +1,13 @@
+.form {
+  align-self: start;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.select {
+  display: flex;
+  padding: 0.2rem 0.5rem;
+  flex-direction: column;
+}

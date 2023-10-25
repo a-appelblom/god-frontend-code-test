@@ -2,6 +2,8 @@ import styles from "../public/css/home.module.css";
 import { GetStaticProps } from "next";
 import Carousel from "../src/components/Carousel";
 import CarouselCar from "../src/components/CarouselCar";
+import { useState } from "react";
+import BodyFilter from "../src/components/BodyFilter";
 
 export type Car = {
   id: string;
@@ -16,10 +18,13 @@ type Props = {
 };
 
 export default function HomePage({ cars }: Props) {
+  const [filteredCars, setFilteredCars] = useState<Car[]>(cars);
+
   return (
     <main className={styles.main}>
-      <Carousel items={cars.length}>
-        {cars.map((car) => (
+      <BodyFilter cars={cars} setCars={setFilteredCars} />
+      <Carousel items={filteredCars.length}>
+        {filteredCars.map((car) => (
           <CarouselCar key={car.id} car={car} />
         ))}
       </Carousel>
