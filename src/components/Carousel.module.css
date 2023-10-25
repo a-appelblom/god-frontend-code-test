@@ -30,7 +30,7 @@
   height: 1rem;
   width: 100%;
   right: 0;
-  bottom: 0;
+  bottom: 1rem;
   left: 0;
 }
 
@@ -78,7 +78,7 @@
   rotate: 180deg;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .container {
     width: 100%;
   }
