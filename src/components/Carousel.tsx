@@ -54,7 +54,7 @@ export default function Carousel({ children, items }: Props) {
     }
   }
   useEffect(() => {
-    wrapperRef.current?.scrollTo({ left: 0, behavior: "instant" });
+    wrapperRef.current?.scrollTo({ left: 0, behavior: "auto" });
   }, [children]);
 
   return (

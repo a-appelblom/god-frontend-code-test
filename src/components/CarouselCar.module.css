@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  scroll-snap-align: start;
+  scroll-snap-align: flex-start;
   /* position: relative; */
 
   display: flex;
@@ -69,7 +69,7 @@
 .extendedModel {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 
 @media screen and (min-width: 768px) {
