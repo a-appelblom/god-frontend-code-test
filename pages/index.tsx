@@ -1,5 +1,14 @@
 import { GetStaticProps } from "next";
-import { Car } from "./api/cars";
+import Carousel from "../src/components/Carousel";
+import CarouselCar from "../src/components/CarouselCar";
+
+export type Car = {
+  id: string;
+  modelName: string;
+  bodyType: string;
+  modelType: string;
+  imageUrl: string;
+};
 
 type Props = {
   cars: Car[];
@@ -8,7 +17,11 @@ type Props = {
 export default function HomePage({ cars }: Props) {
   return (
     <div>
-      <h1>Hello From home</h1>
+      <Carousel>
+        {cars.map((car) => (
+          <CarouselCar key={car.id} car={car} />
+        ))}
+      </Carousel>
     </div>
   );
 }
